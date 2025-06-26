@@ -33,3 +33,20 @@ elif num1 > 0:
         print("number is a positive number and greater than 10.")
 else:
     print("number is zero.")
+
+# for loop
+
+for i in range(2, 20, 2):
+    print(i)
+
+colors = ["red", "green", "blue", "yellow"]
+for col in colors:
+    print(col)
+    for i in col:
+        print(i)
+
+# Tables
+numb = int(input("Enter a number: "))
+for i in range(1, 11):
+    result = numb*i
+    print(f"{numb} x {i} = {result}")
