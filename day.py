@@ -8,7 +8,7 @@ print(f"Hello {name}, you are {age} years old.\n welcome to python")
 
 # Data type
 pi = 3.14
-ch = "ajay"
+ch = "Ajay"
 num = 32
 com = 3 + 7j
 print(f"pi is of type {type(pi)}")
