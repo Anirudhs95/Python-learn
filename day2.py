@@ -1,52 +1,57 @@
-# if, elif, else statements
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+# Day 2 - If/Else
+marks = int(input("Enter your marks: "))
 
-print("name:", name)
-print("age:", age)
-
-if age <= 18:
-    print(name, "is a minor.")
-elif age <= 60:
-    print(name, "is an adult.")
+if marks >= 90:
+    print("Grade: A+")
+elif marks >= 75:
+    print("Grade: A")
+elif marks >= 60:
+    print("Grade: B")
 else:
-    print(name, "is a senior citizen.")
+    print("Grade: C or below")
 
-# Nested if statements
-if age < 18:
-    if age < 13:
-        print(name, "is a child.")
-    else:
-        print(name, "is a teenager.")
+# Day 2 - Loops
 
-# Finding the number
-num1 = int(input("Enter first number: "))
+# For loop example
+for i in range(1, 6):
+    print("Step", i)
 
-print("Number:", num1)
+# While loop example
+count = 0
+while count < 3:
+    print("Repeating:", count)
+    count += 1
 
-if num1 < 0:
-    print(num1, "is a negative number.")
-elif num1 > 0:
-    if num1 <= 10:
-        print("number is a positive number and less than or equal to 10.")
-    elif num1 > 10:
-        print("number is a positive number and greater than 10.")
+# Write a program to find the sum of numbers from 1 to 100
+num = int(input("Enter a number 1 to 100: "))
+sum = 0
+if num > 100 or num < 1:
+    print("Please enter a valid number between 1 and 100.")
 else:
-    print("number is zero.")
+    for i in range(1, num+1):
+        sum += i
+    print("Sum of numbers from 1 to", num, "is:", sum)
 
-# for loop
+# using while loop to find the sum of numbers from 1 to 100
+num1 = int(input("Enter a number 1 to 100: "))
+count = 1
+sum_while = 0
+while count <= num1:
+    sum_while += count
+    count += 12
+print("Sum of numbers from 1 to", num1, "is:", sum_while)
 
-for i in range(2, 20, 2):
-    print(i)
 
-colors = ["red", "green", "blue", "yellow"]
-for col in colors:
-    print(col)
-    for i in col:
-        print(i)
-
-# Tables
-numb = int(input("Enter a number: "))
+# Write a multiplication table for any number entered by user
+T_num = int(input("Enter a number: "))
 for i in range(1, 11):
-    result = numb*i
-    print(f"{numb} x {i} = {result}")
+    res = T_num * i
+    print(f"{T_num}X{i}={res}")
+
+# using while loop to print multiplication table
+tab = int(input("Enter a number: "))
+count = 1
+while count < 11:
+    result = tab * count
+    print(f"{tab}X{count}={result}")
+    count += 1
