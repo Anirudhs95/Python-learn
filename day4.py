@@ -26,27 +26,26 @@ with open("sample.txt", "r") as file:
 
 # Expence tracker
 
-
-def add_expenses(name, cost):
-    with open("Expenses.txt", "w") as f:
-        f.write(f"{name} = {cost}$")
-
+def add_expense(name, amount):
+    with open("Expenses.txt", "a") as file:
+        file.write(f"{name} = {amount} Rupees\n")
 
 def show_expenses():
-    print("-----All Expenses-----")
-    with open("Expenses.txt", "r") as f:
-        data = f.read()
-        print(data)
+    print("\n--- All Expenses ---")
+    with open("Expenses.txt", "r") as file:
+        print(file.read())
 
+while True:
+    print("\n1. Add Expense\n2. Show Expenses\n3. Exit")
+    choice = input("Choose option: ")
 
-print("\n1. adding expenses.\n2. showing expenses.")
-choice = int(input("Enter your choice: "))
-
-if choice == 1:
-    obj = input("Enter the expenditure name: ")
-    ammount = float(input("Enter the price of expenditure: "))
-    add_expenses(obj, ammount)
-elif choice == 2:
-    show_expenses()
-else:
-    print("invalid choice")
+    if choice == "1":
+        item = input("Enter expense item: ")
+        cost = input("Enter amount: ")
+        add_expense(item, cost)
+    elif choice == "2":
+        show_expenses()
+    elif choice == "3":
+        break
+    else:
+        print("Invalid option. Try again.")
